@@ -11,7 +11,7 @@ public class MayorIgualCero {
         Scanner NumeroIngresado = new Scanner (System.in);
         System.out.println("Por favor ingrese el número a comparar: ");
         Numero = NumeroIngresado.nextDouble();
-        System.out.println( Respuesta());
+        System.out.println(Respuesta());
         return (Numero >= 0) ;
     }
 
