@@ -26,12 +26,12 @@ public class Persona {
 
 
     public Persona(){
-        this.Nombre = this.NombrePorDefecto;
-        this.Edad = this.EdadPorDefecto;
+        this.Nombre = NombrePorDefecto;
+        this.Edad = EdadPorDefecto;
         this.DNI = GeneradorDNI();
-        this.Sexo = this.SexoPorDefecto;
-        this.Peso = this.PesoPorDefecto;
-        this.Altura = this.AlturaPorDefecto;
+        this.Sexo = SexoPorDefecto;
+        this.Peso = PesoPorDefecto;
+        this.Altura = AlturaPorDefecto;
     }
 
     public Persona(String Nombre, int Edad, char Sexo){
@@ -39,8 +39,8 @@ public class Persona {
         this.Edad = Edad;
         this.DNI = GeneradorDNI();
         this.Sexo = ComprobarSexo(Sexo);
-        this.Peso = this.PesoPorDefecto;
-        this.Altura = this.AlturaPorDefecto;
+        this.Peso = PesoPorDefecto;
+        this.Altura = AlturaPorDefecto;
     }
 
     public Persona(String Nombre, int Edad, char Sexo, float Peso, float Altura){
