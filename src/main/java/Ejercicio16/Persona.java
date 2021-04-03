@@ -1,6 +1,7 @@
 package Ejercicio16;
 
-import java.util.Random;
+import java.util.List;
+import java.util.Arrays;
 
 import static java.lang.Math.pow;
 
@@ -37,7 +38,7 @@ public class Persona {
         this.Nombre = Nombre;
         this.Edad = Edad;
         this.DNI = GeneradorDNI();
-        this.Sexo = Sexo;
+        this.Sexo = ComprobarSexo(Sexo);
         this.Peso = this.PesoPorDefecto;
         this.Altura = this.AlturaPorDefecto;
     }
@@ -64,7 +65,7 @@ public class Persona {
     }
 
     public char ObtenerSexo() {
-        return Sexo;
+        return ComprobarSexo(Sexo);
     }
 
     public float ObtenerPeso() {
@@ -180,7 +181,14 @@ public class Persona {
     }
 
     private String GeneradorDNI(){
-        return (int) (Math.random() * 99999999) + 10000000 + "K";
+        int NumeroDNI = (int) (Math.random() * 99999999) + 10000000;
+        return NumeroDNI + LetraDNI(NumeroDNI);
+    }
+
+    private String LetraDNI(int NumeroDNI){
+        List<String> Letra = Arrays.asList(new String[] {"T", "R", "W", "A", "G", "M", "Y",
+                    "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"});
+        return Letra.get(NumeroDNI%23);
     }
 
 }
