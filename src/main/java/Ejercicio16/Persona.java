@@ -169,6 +169,7 @@ public class Persona {
         return ( (Sexo=='h') || (Sexo=='m') ) ? Sexo : this.ObtenerSexoPorDefecto();
     }
 
+    @Override
     public String toString(){
         return "Persona {" +
                 "Nombre = " + this.ObtenerNombre() + '\n' +
