@@ -1,7 +1,5 @@
 package Ejercicio17;
 
-import Ejercicio16.Persona;
-
 public class Main {
 
     static float PrecioTotalDeLasLavadoras = 0;
